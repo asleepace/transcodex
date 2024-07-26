@@ -1,6 +1,10 @@
 # Transcodex
 
-A basic command line utility for transcoding files such as (.heic) to (.jpeg)
+A basic command line utility for transcoding files such as (.heic) to (.jpeg) written in the [Swift](https://www.swift.org/) programming language.
+
+|Dependencies|Version|
+|------------|-------|
+|[Swift](https://www.swift.org/install)|5.10|
 
 ## Basic Usage
 

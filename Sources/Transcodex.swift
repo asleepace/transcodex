@@ -13,8 +13,8 @@ import ImageIO
 
 @main
 struct FigletTool: ParsableCommand {
-  @Option(help: "Specify local image url")
-  public var image: String
+  @Option(help: "Specify local image path")
+  public var source: String
   
   private enum TranscodingType {
     case HEIC
@@ -32,9 +32,9 @@ struct FigletTool: ParsableCommand {
   }
 
   public func run() throws {
-    Figlet.say("Swift HEIC");
+    Figlet.say("Transcodex");
     
-    let imageURL = URL(fileURLWithPath: self.image)
+    let imageURL = URL(fileURLWithPath: self.source)
     print("Transcoding source: \(imageURL)")
     
     guard let transcodedURL = try? self.transode(image: imageURL.standardizedFileURL, to: .JPEG) else {
